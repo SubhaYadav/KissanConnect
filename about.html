@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about KissanConnect - Connecting farmers with technology and resources for sustainable agriculture.">
+    <title>About Us - KissanConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #1b5e20;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav .logo i {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #4caf50;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            color: #1b5e20;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            animation: fadeIn 0.8s ease;
+        }
+
+        h3 {
+            color: #2e7d32;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: #ff9800;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            margin-bottom: 0.8rem;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Mission & Vision */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .mission-box,
+        .vision-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 5px solid #ff9800;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeInLeft 0.8s ease;
+        }
+
+        .vision-box {
+            animation: fadeInRight 0.8s ease;
+        }
+
+        .mission-box h3,
+        .vision-box h3 {
+            color: #1b5e20;
+            margin-bottom: 1rem;
+        }
+
+        /* Why Section */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .why-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .why-item:hover {
+            background-color: #f0f7f0;
+            transform: translateY(-4px);
+        }
+
+        .why-item i {
+            font-size: 2rem;
+            color: #4caf50;
+            margin-bottom: 0.8rem;
+        }
+
+        .why-item h4 {
+            color: #1b5e20;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .why-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            background-color: #ff9800;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background-color: #f57c00;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Scroll animation observer class */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-seedling"></i>
+                KissanConnect
+            </div>
+            <ul>
+                <li><a href="#who-we-are" class="nav-link">Who We Are</a></li>
+                <li><a href="#mission" class="nav-link">Mission</a></li>
+                <li><a href="#why" class="nav-link">Why Us</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>About KissanConnect</h1>
+        <p>Empowering farmers with technology, knowledge, and resources to achieve sustainable and profitable agriculture</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Who We Are -->
+        <section id="who-we-are">
+            <h2>Who We Are</h2>
+            <div class="cards">
+                <div class="card scroll-animate">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Focused</h3>
+                    <p>We are a dedicated team of agricultural experts, technologists, and innovators working to transform farming practices across India.</p>
+                </div>
+                <div class="card scroll-animate">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation Driven</h3>
+                    <p>We leverage cutting-edge technology and data-driven insights to provide practical solutions for modern agricultural challenges.</p>
+                </div>
+                <div class="card scroll-animate">
+                    <i class="fas fa-heart"></i>
+                    <h3>Farmer First</h3>
+                    <p>Every decision we make is guided by our commitment to improve the lives and livelihoods of farmers and their families.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section id="mission">
+            <h2>Our Mission & Vision</h2>
+            <div class="mission-vision">
+                <div class="mission-box scroll-animate">
+                    <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                    <p>To connect farmers with the tools, knowledge, and markets they need to make informed decisions and maximize their agricultural productivity while ensuring sustainability and profitability.</p>
+                </div>
+                <div class="vision-box scroll-animate">
+                    <h3><i class="fas fa-telescope"></i> Our Vision</h3>
+                    <p>To create a thriving agricultural ecosystem where every farmer has access to technology, market opportunities, and peer networks that enable them to achieve food security and economic prosperity.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why KissanConnect -->
+        <section id="why">
+            <h2>Why Choose KissanConnect</h2>
+            <div class="why-grid">
+                <div class="why-item scroll-animate">
+                    <i class="fas fa-database"></i>
+                    <h4>Real-Time Data</h4>
+                    <p>Access to weather updates, market prices, and crop information in real-time to make better decisions.</p>
+                </div>
+                <div class="why-item scroll-animate">
+                    <i class="fas fa-book"></i>
+                    <h4>Expert Guidance</h4>
+                    <p>Learn from agricultural experts and access curated content specific to your farming needs.</p>
+                </div>
+                <div class="why-item scroll-animate">
+                    <i class="fas fa-store"></i>
+                    <h4>Market Access</h4>
+                    <p>Connect directly with buyers and farmer to get fair prices for your produce.</p>
+                </div>
+                <div class="why-item scroll-animate">
+                    <i class="fas fa-users-community"></i>
+                    <h4>Community Network</h4>
+                    <p>Join thousands of farmers to share experiences, knowledge, and best practices.</p>
+                </div>
+                <div class="why-item scroll-animate">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Sustainable Farming</h4>
+                    <p>Adopt eco-friendly practices that protect the environment and ensure long-term productivity.</p>
+                </div>
+                <div class="why-item scroll-animate">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Easy Access</h4>
+                    <p>Mobile-first platform designed for farmers with offline capability and simple navigation.</p>
+                </div>
+            
+                <div class="why-item scroll-animate">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Growth Analytics</h4>
+                    <p>Track your farm's performance with detailed analytics and insights to improve yields.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Goals -->
+        <section>
+            <h2>Our Goals</h2>
+            <div class="cards">
+                <div class="card scroll-animate">
+                    <i class="fas fa-target"></i>
+                    <h3>Scale Impact</h3>
+                    <p>Reach 1 million farmers across Nepal within the next five years with our technology platform and services.</p>
+                </div>
+                <div class="card scroll-animate">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Build Capacity</h3>
+                    <p>Provide training and education to farmers on modern farming techniques, technology, and business practices.</p>
+                </div>
+                <div class="card scroll-animate">
+                    <i class="fas fa-coins"></i>
+                    <h3>Increase Income</h3>
+                    <p>Help farmers increase their farm income by 50% through better market access and optimized farming practices.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack -->
+        <section>
+            <h2>Our Technology Stack</h2>
+            <div class="cards">
+                <div class="card scroll-animate">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Infrastructure</h3>
+                    <p>Secure, scalable cloud-based platform ensuring 99.9% uptime and data security for all farmers.</p>
+                </div>
+                <div class="card scroll-animate">
+                    <i class="fas fa-ai"></i>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Predictive analytics for weather, crop health, and market trends to provide actionable insights.</p>
+                </div>
+                <div class="card scroll-animate">
+                    <i class="fas fa-globe"></i>
+                    <h3>IoT Integration</h3>
+                    <p>Real-time sensor data from farms enabling automated monitoring of soil, weather, and crop health.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section id="team">
+            <h2>Meet Our Team</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 1.1rem;">
+                Our diverse team combines expertise in agriculture, technology, economics, and business to create innovative solutions for farmers.
+            </p>
+            <div class="cards">
+                <div class="card scroll-animate">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Leadership and Owner</h3>
+                    <p>Subha Saubhagya Singh Yadav</p>
+                </div>
+                <div class="card scroll-animate">
+                    <i class="fas fa-code"></i>
+                    <h3>Technology Team</h3>
+                    <p>Subha Saubhagya Singh Yadav</p>
+                </div>
+                <div class="card scroll-animate">
+                    <i class="fas fa-speech"></i>
+                    <h3>Field Team</h3>
+                    <p>Pratik Poudel</p>
+                </div>
+                <div class="card scroll-animate">
+                    <i class="fas fa-speech"></i>
+                    <h3>Mentor</h3>
+                    <p>Shubh Pravat Singh Yadav</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="text-align: center; background: white; padding: 3rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 3rem;">
+            <h2>Ready to Transform Your Farm?</h2>
+            <p style="color: #666; font-size: 1.1rem; margin-bottom: 2rem;">
+                Join thousands of farmers already using KissanConnect to grow their income and make better decisions.
+            </p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); max-width: 600px; margin: 2rem auto; text-align: center;">
+                <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.8;">
+                    <i class="fas fa-envelope" style="color: #ff9800; margin-right: 0.5rem;"></i> Email: subhasaubhagyasinghyadav@gmail.com<br>
+                    <i class="fas fa-phone" style="color: #ff9800; margin-right: 0.5rem;"></i> Phone: +977 9812484699<br>
+                    <i class="fas fa-map-marker-alt" style="color: #ff9800; margin-right: 0.5rem;"></i> Headquarters: Butwal
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 KissanConnect. All rights reserved.</p>
+        <p>Empowering farmers, transforming agriculture, building prosperity.</p>
+    </footer>
+
+    <script>
+        // Navigation link highlighting
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
